@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/infOperadores.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registro-ventas.css') }}">
+    <script src="{{ url_for('static', filename='js/ventas.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>registro de ventas</title>
+</head>
+
+{% include 'dashboard/cabecera.html' %}
+
+
+<div class="container">
+    <h1>Interfaz de Venta de Productos</h1>
+
+            {% for resul in resultado %}
+    <div class="targetas">
+                    <div class="card-crg">
+                        <img src="/static/images/alimento.jpg" class="card-img-top" alt="Nombre del producto">
+                        <h5 class="card-title" id="Nombre">{{ resul[0] }}</h5>
+                        <p class="card-text" id="precio">Precio: {{ resul[1] }}</p>
+                        <button id="boton" class="btn btn-primary" onclick="agregarAlCarrito()">Agregar al carrito</button>
+                    </div>
+                    
+            {% endfor %}              
+        <div class="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="carrito-lista"></ul>
+            <h3>Total: $<span id="total">0</span></h3>
+            <button onclick="pagar()">Pagar</button>
+        </div>
+    </div>
+</div>
+
+{% include 'dashboard/pie.html' %}
+
