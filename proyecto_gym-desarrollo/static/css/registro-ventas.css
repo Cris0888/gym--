@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo para el título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las tarjetas de producto */
+
+.card-crg{
+    width: 250px;
+    height: 280px;
+    background-color: rgb(204, 204, 204);
+    margin-left: 20px;
+    float: left;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    
+}
+
+
+#boton{
+    margin-bottom: 10px;
+}
+/* Estilo para las imágenes dentro de las tarjetas */
+.card-img-top {
+    max-width: 150px;
+    max-height: 150px;
+    margin-top: 15px;
+    
+}
+
+/* Estilo para el precio dentro de las tarjetas */
+.card-text {
+    font-size: 20px;
+}
+
+/* Estilo para el carrito de compras */
+.carrito {
+    margin-top: 400px;
+}
+
+/* Estilo para los elementos dentro del carrito */
+#carrito-lista {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo para el botón de pagar */
+.carrito button {
+    background-color: #FFD100;;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Estilo para el botón de agregar al carrito */
+.btn-primary {
+    background-color: #FFD100;;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 135px;
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #FFD100;;
+}
